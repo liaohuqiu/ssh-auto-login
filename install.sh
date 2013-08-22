@@ -3,7 +3,7 @@
 
 if [ ! $# -eq 2 ]; then
     echo "Usage: sh $0 user_name password"
-    echo "exsample: sh $0 huqiu Flzx3qc"
+    echo "exsample: sh $0 wuxiu Flzx3qc"
     exit;
 fi
 
