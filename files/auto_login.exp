@@ -5,6 +5,6 @@ set password [lindex $argv 2]
 set timeout -1
 spawn ssh $user@$host
 match_max 100000
-expect "*password:*"
+expect "*Password:*"
 send -- "$password\n"
 interact
