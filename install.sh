@@ -3,8 +3,8 @@
 
 if [ ! $# -eq 2 ]; then
     echo "Usage: sh $0 user_name password"
-    echo "exsample: sh $0 wuxiu Flzx3qc"
-    exit;
+    echo "exsample: sh $0 username password"
+    return;
 fi
 
 . ./base.sh
@@ -35,4 +35,3 @@ EOF
 chmod u+x $work_script_file_path
 
 set_alias $alias_key $work_script_file_path
-

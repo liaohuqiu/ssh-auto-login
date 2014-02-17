@@ -1,3 +1,7 @@
+# auto append by: https://github.com/liaohuqiu/ssh-auto-login
+
 host *
 ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
+
+# end of auto append

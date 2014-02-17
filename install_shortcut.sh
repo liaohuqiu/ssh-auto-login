@@ -4,7 +4,7 @@
 if [ ! $# -eq 4 ]; then
     echo "Usage: sh $0 alias_key host_name user_name password"
     echo "exsample: sh $0 to_pre host_name wuxiu Flzx3qc"
-    exit;
+    return;
 fi
 
 . ./base.sh
