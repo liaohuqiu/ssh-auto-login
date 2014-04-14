@@ -34,15 +34,14 @@ function init()
 
 function set_alias()
 {
-    #TODO exe_cmd "ln -sf $1 $2"
     local bashrc=$HOME/.bash_profile
     local alias_key=$1
     local file=$2
-    #todo:  make alias take effect instantly
     if ! grep -q "alias $alias_key=" $bashrc; then
         cmd="alias $alias_key=$file"
         echo $cmd >> $bashrc
     fi
+    exe_cmd "alias '$alias_key=$file'"
 }
 
 # mode file tag_str content
