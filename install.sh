@@ -35,3 +35,4 @@ EOF
 
 chmod u+x $work_script_file_path
 set_alias $alias_key $work_script_file_path
+
