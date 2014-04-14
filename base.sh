@@ -19,7 +19,6 @@ function init()
         mkdir $auto_gen_dir
     fi
 
-    #todo: merge ssh_config
     local ssh_config="$HOME/.ssh/config"
     local ssh_config_sample="$current_dir/files/ssh_config"
 
