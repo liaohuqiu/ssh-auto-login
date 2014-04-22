@@ -20,7 +20,7 @@ $ source install_shortcut.sh to-101 192.168.154.101 username password
 $ to-101
 ```
 
-** Attention: **
+**Attention:**
     
 > Your account and password infomation will store in `auto_gen` directory.
 > Keep that in mind and delete the whole directory after you finish you work.
