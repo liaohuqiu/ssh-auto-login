@@ -1,6 +1,11 @@
 #!/bin/bash
 #
 
+if [ $BASH_SOURCE == $0 ]; then
+    echo "Please use source command to run this script."
+    exit;
+fi
+
 if [ ! $# -eq 2 ]; then
     echo "Usage: sh $0 user_name password"
     echo "exsample: sh $0 username password"

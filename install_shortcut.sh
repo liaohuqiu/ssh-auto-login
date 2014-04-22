@@ -1,6 +1,11 @@
 #!/bin/bash
 #
 
+if [ $BASH_SOURCE == $0 ]; then
+    echo "Please use source command to run this script."
+    exit;
+fi
+
 if [ ! $# -eq 4 ]; then
     echo "Usage: sh $0 alias_key host_name user_name password"
     echo "exsample: sh $0 to_pre host_name wuxiu Flzx3qc"
