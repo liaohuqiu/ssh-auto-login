@@ -16,5 +16,9 @@ expect {
     {
         send -- "$password\n"
     }
+    "continue connecting"
+    {
+        send -- "yes\n"
+    }
 }
 interact

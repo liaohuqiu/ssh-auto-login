@@ -25,7 +25,7 @@ function init()
     if [ ! -f $ssh_config ]; then 
         exe_cmd "cp -rf $ssh_config_sample $ssh_config"
     else
-        local config_content="\n"`cat $ssh_config_sample`
+        local config_content=`cat $ssh_config_sample`
         exe_cmd 'change_line append $ssh_config "ControlPath" "$config_content"';
     fi
     chmod 600 $ssh_config
@@ -44,6 +44,7 @@ function set_alias()
 }
 
 # mode file tag_str content
+# https://github.com/liaohuqiu/work-anywhere/blob/master/base.sh
 function change_line() 
 {
     local mode=$1
