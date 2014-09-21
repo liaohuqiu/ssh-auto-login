@@ -16,7 +16,7 @@ Use `source install_shortcut.sh` to install alias command for a realated host, a
 
 ```bash
 # use source to let the alias take effect
-$ source install_shortcut.sh to-101 192.168.154.101 username password
+$ source install_shortcut.sh to-101 username@192.168.154.101
 $ to-101
 ```
 
