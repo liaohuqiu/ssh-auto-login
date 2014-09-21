@@ -1,15 +1,15 @@
 #!/bin/bash
 #
 
-if [ $BASH_SOURCE == $0 ]; then
-    echo "Please use source command to run this script."
-    exit;
-fi
+#if [ $BASH_SOURCE == $0 ]; then
+#    echo "Please use source command to run this script."
+#    exit;
+#fi
 
-if [ ! $# -eq 4 ]; then
-    echo "Usage: sh $0 alias_key host_name user_name password"
-    echo "exsample: sh $0 to_pre host_name wuxiu Flzx3qc"
-    return;
+if [ ! $# -eq 2 ]; then
+    echo "Usage: sh $0 alias_key user_name@host_name"
+    echo "exsample: sh $0 to_pre wuxiu@host_name"
+    exit
 fi
 
 . ./base.sh
@@ -17,9 +17,16 @@ fi
 init
 
 alias_key=$1
-host=$2
-user_name=$3
-password=$4
+uri=$2
+
+uri_componet=(${uri//@/ })
+
+host=${uri_componet[1]}
+user_name=${uri_componet[0]}
+
+read -sp "Please input your password for $user_name@$host:" password
+
+echo
 
 work_script_file_path="$auto_gen_dir/$alias_key.sh"
 
